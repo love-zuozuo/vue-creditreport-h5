@@ -1,0 +1,647 @@
+.vt-ad {
+  height: 192px;
+  background: url(../../../images/banner/example_banner.png) no-repeat;
+  background-size: 100% 100%;
+  .title {
+    padding: 20px 0 10px;
+    text-align: center;
+    color: #efcb93;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    span {
+      font-size: 17px;
+      vertical-align: 2px;
+    }
+  }
+  .tips {
+    font-size: 11px;
+    padding: 0 28px;
+    color: #efcb93;
+    line-height: 16px;
+  }
+  .onScore {
+    position: absolute;
+    top: -3px;
+    width: 35px;
+    height: 20px;
+    background: #3ae3c5;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 2px;
+    &::after {
+      position: absolute;
+      top: 19px;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      font-size: 0; /*是因为, 虽然宽高度为0, 但在IE6下会具有默认的 */
+      line-height: 0; /* 字体大小和行高, 导致盒子呈现被撑开的长矩形 */
+      border-width: 5px;
+      border-style: solid; /*ie6下会出现不透明的兼容问题*/
+      border-color: #3ae3c5 transparent transparent transparent;
+    }
+  }
+}
+
+.vt-score {
+  width: 295px;
+  margin: 15px auto 0;
+  .state {
+    height: 20px;
+    position: relative;
+    margin-bottom: 5px;
+    .van-col {
+      font-size: 11px;
+      color: #999;
+      text-align: center;
+      position: relative;
+      .on {
+        position: absolute;
+        top: -3px;
+        left: 30%;
+        width: 35px;
+        height: 20px;
+        background: #3ae3c5;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        border-radius: 2px;
+
+        i {
+          position: absolute;
+          top: 19px;
+          left: 40%;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          font-size: 0; /*是因为, 虽然宽高度为0, 但在IE6下会具有默认的 */
+          line-height: 0; /* 字体大小和行高, 导致盒子呈现被撑开的长矩形 */
+          border-width: 5px;
+          border-style: solid; /*ie6下会出现不透明的兼容问题*/
+          border-color: #3ae3c5 transparent transparent transparent;
+        }
+      }
+    }
+  }
+  .bar {
+    height: 6px;
+    background: url(../../../images/icon/bar.png) no-repeat;
+    background-size: cover;
+  }
+  .score {
+    padding: 7px 0;
+    position: relative;
+    .van-col {
+      font-size: 9px;
+      color: #999;
+      position: relative;
+    }
+    .bottom {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 7px 0;
+    }
+  }
+}
+
+.vt-owner {
+  background: #fff;
+  border-radius: 7px;
+  padding: 20px 20px 10px;
+  .title {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    .sex-img {
+      width: 24px;
+      height: 29px;
+    }
+    .name {
+      font-size: 17px;
+      font-weight: 500;
+      margin: 0 0 0 8px;
+    }
+    .sex-icon {
+      width: 15px;
+      height: 15px;
+      margin-left: 16px;
+    }
+    .other {
+      margin: 0 0 0 8px;
+      font-size: 13px;
+    }
+  }
+  .list {
+    margin-top: 18px;
+    .item {
+      font-size: 14px;
+      margin-bottom: 15px;
+      .name {
+        color: #999;
+      }
+      .content {
+        color: #2f3c6a;
+      }
+    }
+  }
+}
+
+.vt-operator {
+  .title {
+    padding: 0 0 0 10px;
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 2px;
+      height: 12px;
+      background: #dfb06d;
+    }
+  }
+  .list {
+    .item {
+      margin-bottom: 15px;
+      font-size: 14px;
+      .name {
+        color: #999;
+      }
+      .info {
+        color: #2f3c6a;
+      }
+    }
+  }
+}
+
+.vt-riskLoan {
+  .tips {
+    font-size: 13px;
+    color: #dd880f;
+    background: #ffe9c1;
+    border-radius: 4px;
+    padding: 7px;
+    text-align: left;
+    line-height: 19px;
+  }
+  .risk {
+    .title {
+      color: #333333;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      span {
+        width: 2px;
+        height: 12px;
+        background: #333333;
+        border-radius: 1px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .vt-change {
+    margin: 15px 10px;
+    height: 42px;
+    display: flex;
+    flex-flow: row;
+    border: solid 1px #dbdbdb;
+    border-radius: 30px;
+    .item {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #999;
+      &.on {
+        color: #333;
+        font-weight: bold;
+      }
+    }
+  }
+  .vt-tabbar {
+    margin: 0 10px;
+    .vt-tab {
+      height: 40px;
+      box-shadow: inset 0px -1px 1px -1px #666;
+      display: flex;
+      flex-flow: row;
+      .item {
+        width: 50%;
+        font-size: 14px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #999;
+        &.on {
+          border-bottom: solid 1px #2c3965;
+          color: #2c3965;
+        }
+      }
+    }
+    .vt-chart {
+      margin: 0 0 20px;
+      position: relative;
+      .header {
+        width: 200px;
+        .item {
+          display: block;
+          .info,
+          .num {
+            color: #999;
+            font-size: 12px;
+          }
+          .info {
+            span {
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              margin: 4px 5px 0 0;
+              border-radius: 2px;
+            }
+          }
+          .num {
+            text-align: right;
+          }
+        }
+      }
+      .chart {
+        width: 100%;
+        height: 280px;
+      }
+    }
+  }
+}
+
+.vt-icheck {
+  .tips {
+    font-size: 13px;
+    color: #dd880f;
+    background: #ffe9c1;
+    border-radius: 4px;
+    padding: 7px;
+    text-align: left;
+    line-height: 19px;
+  }
+  .list {
+    margin: 20px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    .item {
+      font-size: 14px;
+      color: #333;
+      padding: 10px 0;
+      margin: 0 10px;
+      border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+      &:last-of-type {
+        border-bottom: 0;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        img {
+          width: 16px;
+          height: 15px;
+          margin-right: 5px;
+        }
+        .content {
+          color: #666666;
+        }
+      }
+      .subList {
+        margin: 10px 25px 0 25px;
+        .list-li {
+          color: #666666;
+          padding: 10px 0;
+          display: flex;
+          align-items: center;
+          i {
+            width: 4px;
+            height: 4px;
+            background: #ddd;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.vt-blackList {
+  .vt-tab {
+    height: 40px;
+    box-shadow: inset 0px -1px 1px -1px #666;
+    display: flex;
+    flex-flow: row;
+    margin: -10px 0 0;
+    .item {
+      width: 50%;
+      font-size: 14px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #999999;
+      &.on {
+        border-bottom: solid 1px #2c3965;
+        color: #2c3965;
+        font-weight: bold;
+      }
+    }
+  }
+  .content {
+    .item {
+      padding: 15px 0;
+      color: #999;
+      font-size: 11px;
+      .status {
+        text-align: right;
+      }
+      .title {
+        font-size: 13px;
+        font-weight: 400;
+        color: #333;
+      }
+      .tips {
+        margin: 5px 0 0;
+      }
+      .on {
+        color: #ff3d14;
+      }
+    }
+  }
+}
+
+.vt-contacts {
+  .tips {
+    font-size: 13px;
+    color: #dd880f;
+    background: #ffe9c1;
+    border-radius: 4px;
+    padding: 7px;
+    text-align: left;
+  }
+  .title {
+    padding: 15px 0;
+    .van-col {
+      font-size: 14px;
+      color: #999;
+      &:nth-child(3) {
+        text-align: right;
+      }
+    }
+  }
+  .list {
+    .item {
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+      color: #666;
+      font-size: 13px;
+      .subList {
+        .subItem {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .van-col {
+            &:nth-child(2) {
+              text-align: right;
+            }
+          }
+          .on {
+            color: #ff3d14;
+          }
+        }
+      }
+    }
+  }
+}
+
+.vt-break {
+  .tips {
+    font-size: 13px;
+    color: #dd880f;
+    background: #ffe9c1;
+    border-radius: 4px;
+    padding: 7px;
+    text-align: left;
+    line-height: 19px;
+  }
+  .content {
+    margin: 25px 0;
+    .city {
+      margin: 0 15px 0 0;
+    }
+    p {
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #666;
+      span {
+        color: #999;
+      }
+      img {
+        height: 14px;
+        vertical-align: -2px;
+      }
+    }
+  }
+}
+
+.vt-tabs {
+  margin: 5px 0 0;
+  .main {
+    margin: 20px 20px;
+  }
+  .van-tab {
+    flex-basis: 30% !important;
+    font-size: 16px;
+  }
+  .van-hairline--top-bottom::after {
+    border: none;
+  }
+  .van-tab--active {
+    font-size: 17px;
+    font-weight: bold;
+  }
+}
+
+.van-error {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 16px;
+}
+
+.borrow-ul {
+  list-style: none;
+  margin-top: 10px;
+  li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    font-size: 14px;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    .title {
+      color: #666666;
+    }
+    .data {
+      color: #333333;
+      margin-top: 15px;
+    }
+  }
+}
+
+.report-con {
+  background: url('../../../images/report/report-bg.png') no-repeat;
+  background-size: 100%;
+  width: 100%;
+  padding: 75px 10px 0;
+  .report-card {
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px 20px 10px;
+    margin-top: 10px;
+    .head {
+      display: flex;
+      align-items: center;
+      .left {
+        color: #36467a;
+        font-size: 28px;
+      }
+      .line {
+        width: 1px;
+        height: 20px;
+        background: rgba(221, 226, 241, 1);
+        margin: 0 5px;
+      }
+      .right {
+        margin-left: 10px;
+        .cn-name {
+          color: #36467a;
+          font-size: 17px;
+        }
+        .en-name {
+          font-size: 8px;
+          color: #9fabd3;
+        }
+      }
+    }
+    .con {
+      margin-top: 20px;
+      .desc {
+        font-size: 14px;
+        color: #666666;
+        margin: 10px 0;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+.statement-img {
+  width: 100%;
+}
+.score-box {
+  margin-top: 20px;
+  .title {
+    color: #666666;
+    font-size: 15px;
+    text-align: center;
+  }
+  .scoreChart {
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
+  }
+  .sub-title {
+    color: #999999;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 30px;
+  }
+}
+
+.assess-box {
+  .assess {
+    padding: 10px 35px;
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 33px;
+      height: 33px;
+    }
+  }
+  .con {
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    height: 100px;
+    margin-top: 20px;
+    padding: 15px;
+    textarea {
+      resize: none;
+      outline: none;
+      width: 100%;
+      border: none;
+    }
+  }
+  .max {
+    text-align: right;
+    width: 100%;
+    margin: 0;
+    color: #dddddd;
+    font-size: 14px;
+  }
+  .btn {
+    color: #ffffff;
+    font-size: 17px;
+    padding: 13px 0;
+    width: 225px;
+    margin: 10px auto;
+    border-radius: 100px;
+    background: #2c2e44;
+    text-align: center;
+  }
+}
+
+.ds-enter {
+  height: 75px;
+  margin-top: 20px;
+  background: url('../../../images/report/btn-group-bg.png');
+	background-size: 100% 100%;
+	padding-top: 40px;
+	padding-left: 111px;
+  .btn-group {
+		display: flex;
+    div {
+      width: 90px;
+      line-height: 26px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 13px;
+      text-align: center;
+      color: #f5a623;
+			margin-right: 12px;
+			font-size: 14px;
+    }
+  }
+}
